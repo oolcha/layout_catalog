@@ -6,5 +6,8 @@ module.exports = {
   plugins: [
     "stylelint-scss"
   ],
-  rules: {}
+  rules: {},
+  ignoreFiles: [
+    "src/styles/**/*.css"
+  ]
 };
