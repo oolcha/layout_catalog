@@ -7,15 +7,15 @@ But don't add empty lines between parent and child elements
 GOOD example:
 ```html
 <ul>
-  <li class="nav__item">
+  <li class="header__nav-item">
     <a href="#home">Home</a>
   </li>
 
-  <li class="nav__item">
+  <li class="header__nav-item">
     <a href="#shop">Shop</a>
   </li>
 
-  <li class="nav__item">
+  <li class="header__nav-item">
     <a href="#contacts">Contacts</a>
   </li>
 </ul>
@@ -24,13 +24,13 @@ BAD example:
 ```html
 <ul>
 
-  <li class="nav__item">
+  <li class="header__nav-item">
     <a href="#home">Home</a>
   </li>
-  <li class="nav__item">
+  <li class="header__nav-item">
     <a href="#shop">Shop</a>
   </li>
-  <li class="nav__item">
+  <li class="header__nav-item">
     <a href="#contacts">Contacts</a>
   </li>
 
@@ -137,11 +137,11 @@ $color-accent-blue: #00acdc;
 
 BAD example:
 ```scss
-.stars--1 .stars__star:nth-child(-n + 1),
-.stars--2 .stars__star:nth-child(-n + 2),
-.stars--3 .stars__star:nth-child(-n + 3),
-.stars--4 .stars__star:nth-child(-n + 4),
-.stars--5 .stars__star:nth-child(-n + 5) {
+&--1 &__star:nth-child(-n + 1),
+&--2 &__star:nth-child(-n + 2),
+&--3 &__star:nth-child(-n + 3),
+&--4 &__star:nth-child(-n + 4),
+&--5 &__star:nth-child(-n + 5) {
   background-image: url("../images/star-active.svg");
 }
 ```
@@ -149,7 +149,7 @@ BAD example:
 GOOD example:
 ```scss
 @for $starCount from 1 through 5 {
-    &--#{$starCount} .stars__star:nth-child(-n + #{$starCount}) {
+    &--#{$starCount} &__star:nth-child(-n + #{$starCount}) {
       background-image: url(../images/star-active.svg);
     }
   }
