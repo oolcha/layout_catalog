@@ -6,10 +6,15 @@
   border-radius: 5px;
   background-color: var(--light-color);
 
-  &__image {
+  &__image-container {
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
+  }
+
+  &__img {
+    width: 160px;
+    height: 134px;
   }
 
   &__product-name {
@@ -69,8 +74,9 @@
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
-    max-width: 100%;
-    min-height: 40px;
+    width: 100%;
+    border: 1px solid var(--accent-color);
+    line-height: 16px;
   }
 
   &__btn:hover {
@@ -78,9 +84,4 @@
     color: var(--accent-color);
     border: 1px solid var(--accent-color);
   }
-}
-
-.img {
-  width: 160px;
-  height: 134px;
 }
